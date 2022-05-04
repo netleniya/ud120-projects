@@ -26,7 +26,6 @@ from sklearn.naive_bayes import GaussianNB
 
 clf = GaussianNB()
 
-
 ##############################################################
 
 ##############################################################
@@ -45,3 +44,7 @@ clf.predict(features_test)
 print("Predicting Time:", round(time()-t0, 3), "s")
 
 ##############################################################
+
+acc = clf.score(features_test, labels_test)
+
+print(f"Model Accuracy: {acc}")
